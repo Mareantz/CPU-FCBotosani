@@ -4,10 +4,10 @@
 
 void AddInstruction::execute(vector<uint16_t> instructionArguments, vector<uint16_t>& registers, vector<uint16_t>& flags, uint16_t& instructionPointer, uint16_t& stackPointer, uint16_t stackBase, uint16_t stackSize)
 {
-	int src1 = instructionArguments[1];
-	int src2 = instructionArguments[2];
-	int src1Value = instructionArguments[3];
-	int src2Value = instructionArguments[4];
+	uint16_t src1 = instructionArguments[1];
+	uint16_t src2 = instructionArguments[2];
+	uint16_t src1Value = instructionArguments[3];
+	uint16_t src2Value = instructionArguments[4];
 
 	if (src1 == 0x10)
 		throw std::exception("In add instruction src1 can't be immediate!");

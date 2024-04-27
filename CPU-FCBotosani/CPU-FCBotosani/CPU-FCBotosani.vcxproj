@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="AddInstruction.cpp" />
     <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="DivInstruction.cpp" />
     <ClCompile Include="FetchUnit.cpp" />
     <ClCompile Include="Instruction.cpp" />
     <ClCompile Include="LoadExecuteChannel.cpp" />
@@ -137,11 +138,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="MemoryRequestsChannel.cpp" />
+    <ClCompile Include="MulInstruction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddInstruction.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="CPU.h" />
+    <ClInclude Include="DivInstruction.h" />
     <ClInclude Include="FetchUnit.h" />
     <ClInclude Include="Instruction.h" />
     <ClInclude Include="LoadExecuteChannel.h" />
@@ -149,6 +152,7 @@
     <ClInclude Include="LoadStoreUnit.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="MemoryRequestsChannel.h" />
+    <ClInclude Include="MulInstruction.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="memory.txt" />
