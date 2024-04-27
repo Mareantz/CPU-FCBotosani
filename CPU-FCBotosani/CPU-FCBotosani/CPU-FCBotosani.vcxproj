@@ -128,6 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MemoryRequestsChannel.cpp" />
+    <ClCompile Include="src\units\Memory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MemoryRequestsChannel.h" />
+    <ClInclude Include="src\units\Memory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\units\memory.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
