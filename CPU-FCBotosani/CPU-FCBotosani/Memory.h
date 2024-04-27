@@ -2,6 +2,7 @@
 
 #include <map>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -14,14 +15,16 @@ class Memory
 
 	Memory() {
 		this->fileName = "memory.txt";
+		this->loadMemoryFromFile();
 	}
 
 	Memory(string fileName) {
 		this->fileName = fileName;
+		this->loadMemoryFromFile();
 	}
 
 public:
-	Memory* getInstance(string fileName);
+	static Memory* getInstance(string fileName);
 
 	void loadMemoryFromFile();
 

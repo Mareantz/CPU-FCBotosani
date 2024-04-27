@@ -1,7 +1,12 @@
 #include <iostream>
+#include "Memory.h"
+
 using namespace std;
 int main()
 {
-	cout << "Hello FC Botosani";
+	Memory* memory = Memory::getInstance("memory.txt");
+
+	memory->printMemory();
+
 	return 0;
 }

@@ -1,4 +1,4 @@
-#include "./Memory.h"
+#include "Memory.h"
 
 #include <fstream>
 #include <iostream>
@@ -23,12 +23,14 @@ int stringToInt(string stringToConvert)
 	return value;
 }
 
+Memory* Memory::currentInstance = nullptr;
+
 Memory* Memory::getInstance(string fileName)
 {
-    if (this->currentInstance == nullptr)
-        this->currentInstance = new Memory(fileName);
+	if (currentInstance == nullptr)
+		currentInstance = new Memory(fileName);
 
-    return this->currentInstance;
+	return currentInstance;
 }
 
 void Memory::loadMemoryFromFile()
@@ -62,7 +64,7 @@ void Memory::loadMemoryFromFile()
 
 uint16_t Memory::getByAddress(uint16_t requestedAddress)
 {
-    
+
 	if (this->memoryArea.find(requestedAddress) != this->memoryArea.end())
 		return this->memoryArea[requestedAddress];
 

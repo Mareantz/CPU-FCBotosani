@@ -127,16 +127,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddInstruction.cpp" />
+    <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="FetchUnit.cpp" />
+    <ClCompile Include="Instruction.cpp" />
+    <ClCompile Include="LoadExecuteChannel.cpp" />
+    <ClCompile Include="LoadFetchChannel.cpp" />
+    <ClCompile Include="LoadStoreUnit.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Memory.cpp" />
     <ClCompile Include="MemoryRequestsChannel.cpp" />
-    <ClCompile Include="src\units\Memory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddInstruction.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="CPU.h" />
+    <ClInclude Include="FetchUnit.h" />
+    <ClInclude Include="Instruction.h" />
+    <ClInclude Include="LoadExecuteChannel.h" />
+    <ClInclude Include="LoadFetchChannel.h" />
+    <ClInclude Include="LoadStoreUnit.h" />
+    <ClInclude Include="Memory.h" />
     <ClInclude Include="MemoryRequestsChannel.h" />
-    <ClInclude Include="src\units\Memory.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\units\memory.txt" />
+    <Text Include="memory.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
