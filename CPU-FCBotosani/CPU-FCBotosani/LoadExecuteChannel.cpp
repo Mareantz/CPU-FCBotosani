@@ -1,5 +1,7 @@
 #include "LoadExecuteChannel.h"
 
+LoadExecuteChannel* LoadExecuteChannel::instance = nullptr;
+
 LoadExecuteChannel* LoadExecuteChannel::getInstance()
 {
 	if (instance == nullptr)

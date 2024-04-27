@@ -11,24 +11,24 @@ void MovInstruction::execute(vector<uint16_t> instructionArguments, vector<uint1
 	if (src1 == 0x10)
 		throw std::exception("destination can't be immediate!");
 
-	if (src1 < 0x10 && src2 < 0x10)
-		registers[src1 - 1] = registers[src2 - 1];
+	if (src1 >= 8 && src1 <= 15 && src2 >= 8 && src2 <= 15)
+		registers[src1 - 8] = registers[src2 - 8];
 
-	else if (src1 < 0x10)
+	else if (src1 >= 8 && src1 <= 15)
 	{
-		if (src2 == 0x10)
-			registers[src1 - 1] = src2Value;
+		if (src2 == 0x01)
+			registers[src1 - 8] = src2Value;
 
-		else if (src2 == 0x11)
+		else if (src2 == 0x02)
 		{
 			int valueToAdd = this->channel->loadFromMemory(src2Value);
-			registers[src1 - 1] = valueToAdd;
+			registers[src1 - 8] = valueToAdd;
 		}
 
-		else if (src2 == 0x12)
+		else if (src2 >= 24)
 		{
-			int valueToAdd = this->channel->loadFromMemory(registers[src2Value - 1]);
-			registers[src1 - 1] = valueToAdd;
+			int valueToAdd = this->channel->loadFromMemory(registers[src2Value]);
+			registers[src1 - 8] = valueToAdd;
 		}
 	}
 
@@ -36,32 +36,32 @@ void MovInstruction::execute(vector<uint16_t> instructionArguments, vector<uint1
 	{
 		int addressFromMemory;
 
-		if (src1 == 0x11)
+		if (src1 == 0x02)
 			addressFromMemory = src1Value;
 		else
-			addressFromMemory = registers[src1Value - 1];
+			addressFromMemory = registers[src1Value];
 
-		if (src2 < 0x10)
+		if (src2 >= 8 && src2 <= 15)
 		{
-			int newValue = registers[src2Value - 1];
+			int newValue = registers[src2Value];
 			this->channel->storeToMemory(addressFromMemory, newValue);
 		}
 
-		else if (src2 == 0x10)
+		else if (src2 == 0x01)
 		{
 			int newValue = src2Value;
 			this->channel->storeToMemory(addressFromMemory, newValue);
 		}
 
-		else if (src2 == 0x11)
+		else if (src2 == 0x02)
 		{
 			int newValue = this->channel->loadFromMemory(src2Value);
 			this->channel->storeToMemory(addressFromMemory, newValue);
 		}
 
-		else if (src2 == 0x12)
+		else if (src2 >= 24)
 		{
-			int newValue = this->channel->loadFromMemory(registers[src2Value - 1]);
+			int newValue = this->channel->loadFromMemory(registers[src2Value]);
 			this->channel->storeToMemory(addressFromMemory, newValue);
 		}
 	}

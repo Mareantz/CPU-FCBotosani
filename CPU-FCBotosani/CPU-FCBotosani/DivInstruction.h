@@ -1,7 +1,7 @@
 #pragma once
 #include "Instruction.h"
 
-class DivInstruction : Instruction
+class DivInstruction : public Instruction
 {
 	public:
 		DivInstruction() {

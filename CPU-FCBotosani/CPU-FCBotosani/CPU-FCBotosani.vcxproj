@@ -128,31 +128,61 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AddInstruction.cpp" />
+    <ClCompile Include="CmpInstruction.cpp" />
     <ClCompile Include="CPU.cpp" />
+    <ClCompile Include="DecodeExecuteChannel.cpp" />
+    <ClCompile Include="DecodeUnit.cpp" />
     <ClCompile Include="DivInstruction.cpp" />
+    <ClCompile Include="EndSimInstruction.cpp" />
+    <ClCompile Include="ExecuteUnit.cpp" />
+    <ClCompile Include="FetchDecodeChannel.cpp" />
     <ClCompile Include="FetchUnit.cpp" />
     <ClCompile Include="Instruction.cpp" />
+    <ClCompile Include="JEInstruction.cpp" />
+    <ClCompile Include="JGInstruction.cpp" />
+    <ClCompile Include="JLInstruction.cpp" />
+    <ClCompile Include="JMPInstruction.cpp" />
+    <ClCompile Include="JZInstruction.cpp" />
     <ClCompile Include="LoadExecuteChannel.cpp" />
     <ClCompile Include="LoadFetchChannel.cpp" />
     <ClCompile Include="LoadStoreUnit.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="MemoryRequestsChannel.cpp" />
+    <ClCompile Include="MovInstruction.cpp" />
     <ClCompile Include="MulInstruction.cpp" />
+    <ClCompile Include="PushInstruction.cpp" />
+    <ClCompile Include="SubInstruction.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddInstruction.h" />
+    <ClInclude Include="CmpInstruction.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="CPU.h" />
+    <ClInclude Include="DecodeExecuteChannel.h" />
+    <ClInclude Include="DecodeUnit.h" />
     <ClInclude Include="DivInstruction.h" />
+    <ClInclude Include="EndSimInstruction.h" />
+    <ClInclude Include="ExecuteUnit.h" />
+    <ClInclude Include="FetchDecodeChannel.h" />
     <ClInclude Include="FetchUnit.h" />
     <ClInclude Include="Instruction.h" />
+    <ClInclude Include="JEInstruction.h" />
+    <ClInclude Include="JGInstruction.h" />
+    <ClInclude Include="JLInstruction.h" />
+    <ClInclude Include="JMPInstruction.h" />
+    <ClInclude Include="JZInstruction.h" />
     <ClInclude Include="LoadExecuteChannel.h" />
     <ClInclude Include="LoadFetchChannel.h" />
     <ClInclude Include="LoadStoreUnit.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="MemoryRequestsChannel.h" />
+    <ClInclude Include="MovInstruction.h" />
     <ClInclude Include="MulInstruction.h" />
+    <ClInclude Include="PushInstruction.h" />
+    <ClInclude Include="SubInstruction.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="memory.txt" />
