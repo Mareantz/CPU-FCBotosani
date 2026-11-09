@@ -1,6 +1,6 @@
 #include "CPU.h"
 #include "Constants.h"
-
+// Valeriu Iftime
 CPU::CPU()
 {
 	this->registers = vector<uint16_t>(8);
